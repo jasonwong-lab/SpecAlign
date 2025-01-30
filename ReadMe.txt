@@ -1,4 +1,4 @@
-#SpecAlign version 2.4
+# SpecAlign version 2.4
 
 SpecAlign was initially designed for pre-processing of mass spectrometry and chromatographic data with a focus
 on alignment of signals across samples that may be shifted due to minor changes in spectrometric or 
