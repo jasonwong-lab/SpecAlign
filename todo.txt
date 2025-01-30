@@ -1,0 +1,6 @@
+04-02-2006
+
+To do:
+
+(1) Try to do jacobian.
+(2) Need to work more on width estimation for lognormal.

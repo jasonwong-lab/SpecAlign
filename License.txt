@@ -1,0 +1,9 @@
+++++++++++++++++++++++++++++++++++++++++++++++
+LICENSE AGREEMENT AND DISCLAIMER
+++++++++++++++++++++++++++++++++++++++++++++++
+
+This software, "SpecAlign", is protected by copyright law and international treaties and cannot be distributed, reproduced or reversed-engineered. This software is distributed 'as is' for academic and non-profit organizations. Commercial use or inclusion in another software package, in whole or in part, is prohibited unless otherwise permitted by authors of this software.
+
+This software is provided freely to the scientific community for the purpose of scientific research. There is no warranty for this software, either expressed or implied. The entire risk as to the quality and performance of this software is with the user. In no event will the authors or the University of Oxford be liable for any damages, including any general, special or consequential damages arising out of the use, misuse, or inability to use of this software.
+
+By using the software, you acknowledge that you have read and agree to be bound by this license.

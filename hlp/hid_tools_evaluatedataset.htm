@@ -1,0 +1,136 @@
+<HTML>
+	<HEAD>
+		<TITLE>Subtract spectra command (Tools menu)</TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><A name="hid_view_toolbar"></A><B>Evaluate dataset&nbsp;command (Tools menu)</B></P>
+		<P>
+			This command&nbsp;allows the user to rapidly evaluate the quality of the 
+			dataset by checking for spectra which may be of poor quality relative to others 
+			within the dataset.</P>
+		<P>
+			Two metrics are used to evaluate each spectrum relative to other spectra.</P>
+		<P>The first is&nbsp;the average Pearson's correlation coefficient of each spectrum 
+			against all other spectra within the dataset. For this measurement, users have 
+			the choice to compare each spectrum in separate segments. Furthermore, users 
+			may also choose the range in which to compare spectra. The correlation 
+			coefficient is&nbsp;effective in detecting spectra which are unlike others in 
+			the dataset in terms of shape.</P>
+		<P>
+			The second metric for evaluating spectra quality within the dataset is the 
+			normalization factor. This&nbsp;factor is essentially the scaling factor 
+			calculated applied during a <A href="hid_processing_normalizetic.htm">total ion 
+				current normalization process</A>. The normalization&nbsp;factor is 
+			effective in detecting spectra&nbsp;that substantially vary in total ion 
+			intensity relative to other spectra of the dataset.</P>
+		<P>When the command is executed, users are first given the choice of an ,/z range 
+			to correlate spectra and the number of segments to partition the spectra into 
+			for correlation. Note that&nbsp;1 segment&nbsp;means that the whole spectrum is 
+			correlated with others directly. Increasing the number of segments may be 
+			useful if a spectrum is dominated by high intensity peaks in one region, with 
+			lower intensity peaks exist in others regions of the spectrum.</P>
+		<P><IMG alt="Evaluation dialog" src="Images/evalDlg.jpg"></P>
+		<P>Following the "Evaluate dataset" dialog, users will then be prompted for a 
+			location to save the results of the evaluation.</P>
+		<P><IMG alt="Evaluate dataset file dialog" src="Images/evalDlg_file.jpg"></P>
+		<P>The results will be output as a&nbsp;CSV file which may be viewed in spreadsheet 
+			software such as Microsoft Excel(TM).</P>
+		<P>The output file is divided into two sections, the first is a list of the two 
+			metrics for each spectrum (below).</P>
+		<P>
+			<TABLE id="Table1" cellSpacing="1" cellPadding="1" width="300" border="1">
+				<TR>
+					<TD>Sample</TD>
+					<TD>Average correlation coefficient</TD>
+					<TD>Normalization factor</TD>
+				</TR>
+				<TR>
+					<TD>A1</TD>
+					<TD>0.9823</TD>
+					<TD>0.9003</TD>
+				</TR>
+				<TR>
+					<TD>A2</TD>
+					<TD>0.9455</TD>
+					<TD>1.0433</TD>
+				</TR>
+				<TR>
+					<TD>A3</TD>
+					<TD>0.6544</TD>
+					<TD>1.6934</TD>
+				</TR>
+				<TR>
+					<TD>A4</TD>
+					<TD>0.9922</TD>
+					<TD>1.0321</TD>
+				</TR>
+				<TR>
+					<TD>...</TD>
+					<TD>...</TD>
+					<TD>...</TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P>The second section&nbsp;is&nbsp;a matrix of&nbsp;individual correlation 
+			coefficients of each spectrum against&nbsp;each other&nbsp;(below).</P>
+		<P>
+			<TABLE id="Table2" cellSpacing="1" cellPadding="1" width="300" border="1">
+				<TR>
+					<TD></TD>
+					<TD>A1</TD>
+					<TD>A2</TD>
+					<TD>A3</TD>
+					<TD>A4</TD>
+					<TD>...&nbsp;
+					</TD>
+				</TR>
+				<TR>
+					<TD>A1</TD>
+					<TD>1</TD>
+					<TD>0.9323</TD>
+					<TD>0.5644</TD>
+					<TD>0.9912</TD>
+					<TD>...</TD>
+				</TR>
+				<TR>
+					<TD>A2</TD>
+					<TD>0.9323</TD>
+					<TD>1</TD>
+					<TD>0.6739</TD>
+					<TD>0.9822</TD>
+					<TD>...</TD>
+				</TR>
+				<TR>
+					<TD>A3</TD>
+					<TD>0.5644</TD>
+					<TD>0.6739</TD>
+					<TD>1</TD>
+					<TD>0.4545</TD>
+					<TD>...</TD>
+				</TR>
+				<TR>
+					<TD>A4</TD>
+					<TD>0.9912</TD>
+					<TD>0.9822</TD>
+					<TD>0.4545</TD>
+					<TD>1</TD>
+					<TD>...</TD>
+				</TR>
+				<TR>
+					<TD>...</TD>
+					<TD>...</TD>
+					<TD>...</TD>
+					<TD>...</TD>
+					<TD>...</TD>
+					<TD>1</TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P>(Note that the matrix is symmetric)</P>
+		<P>This matrix can be plotted as a "heatmap" (using external software such as 
+			Matlab)&nbsp;to allow for&nbsp;rapid visual identification of spectra 
+			that&nbsp;may be&nbsp;different&nbsp;from others.</P>
+		<P><IMG alt="Heatmap" src="Images/heatmap.jpg"></P>
+	</BODY>
+</HTML>

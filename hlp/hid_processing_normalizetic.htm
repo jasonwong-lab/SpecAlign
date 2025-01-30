@@ -1,0 +1,30 @@
+<HTML>
+	<HEAD>
+		<TITLE>Normalize TIC?command (Processing menu)</TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><A name="hid_view_toolbar"></A><B>Normalize TIC&nbsp;command (Processing menu)</B></P>
+		<P>
+			This command&nbsp;is used to normalize all spectra such that they will 
+			all&nbsp;share the same&nbsp;total ion current.</P>
+		<P>Note that Total Ion Current (TIC) is a term used for mass spectrometry. The 
+			normalization procedure works in the same way for other spectroscopy methods, 
+			where it may be total&nbsp;absorbance or total signal, etc.</P>
+		<P><STRONG>Normalization algorithm</STRONG></P>
+		<OL>
+			<LI>
+			Calculate the total signal for each spectrum.
+			<LI>
+			Calculate the average&nbsp;signal by dividing the total signal by the number of 
+			data points in each spectrum.
+			<LI>
+			Calculate the average signal for all spectra using the averages from step 2.
+			<LI>
+			Calculate the normalization factor for each spectrum by dividing 
+			the&nbsp;average signal for each spectrum by the average total signal.
+			<LI>
+				To complete the normalization, multiply each value in each spectrum by the 
+				normalization factor.</LI></OL>
+	</BODY>
+</HTML>

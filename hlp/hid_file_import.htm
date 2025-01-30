@@ -1,0 +1,110 @@
+<HTML>
+	<HEAD>
+		<TITLE>Import command (File menu)</TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><A name="hid_file_open"></A><B>Import&nbsp;command (File menu)</B></P>
+		<P>This command gives options to import spectrum files from three different 
+			sources:</P>
+		<P><STRONG>File</STRONG>:</P>
+		<P>This allows importing of either a single&nbsp;spectrum list or a file containing 
+			multiple spectrum list in CSV or TXT (tab-delimited) format.</P>
+		<P>For the multiple&nbsp;spectrum list, the format&nbsp;of&nbsp;list must be in the 
+			form of:</P>
+		<P>
+			<TABLE id="Table1" height="232" cellSpacing="1" cellPadding="1" width="504" border="1">
+				<TR>
+					<TD width="79"><STRONG><EM><FONT face="Arial">m/z</FONT></EM></STRONG></TD>
+					<TD><STRONG><EM><FONT face="Arial">Sample 1</FONT></EM></STRONG></TD>
+					<TD><STRONG><EM><FONT face="Arial">Sample 2</FONT></EM></STRONG></TD>
+					<TD><STRONG><EM><FONT face="Arial">Sample 3</FONT></EM></STRONG></TD>
+					<TD><STRONG><EM><FONT face="Arial">Sample 4</FONT></EM></STRONG></TD>
+					<TD><STRONG><EM><FONT face="Arial">Sample 5</FONT></EM></STRONG></TD>
+				</TR>
+				<TR>
+					<TD width="79"><FONT face="Arial">...</FONT></TD>
+					<TD>
+						<P><FONT face="Arial">12</FONT></P>
+					</TD>
+					<TD><FONT face="Arial">15</FONT></TD>
+					<TD><FONT face="Arial">16</FONT></TD>
+					<TD><FONT face="Arial">18</FONT></TD>
+					<TD><FONT face="Arial">...</FONT></TD>
+				</TR>
+				<TR>
+					<TD width="79"><FONT face="Arial">3453.0</FONT></TD>
+					<TD><FONT face="Arial">16</FONT></TD>
+					<TD><FONT face="Arial">20</FONT></TD>
+					<TD><FONT face="Arial">18</FONT></TD>
+					<TD><FONT face="Arial">20</FONT></TD>
+					<TD><FONT face="Arial">...</FONT></TD>
+				</TR>
+				<TR>
+					<TD width="79" height="21"><FONT face="Arial">3454.0</FONT></TD>
+					<TD height="21"><FONT face="Arial">19</FONT></TD>
+					<TD height="21"><FONT face="Arial">55</FONT></TD>
+					<TD height="21"><FONT face="Arial">45</FONT></TD>
+					<TD height="21"><FONT face="Arial">100</FONT></TD>
+					<TD height="21"><FONT face="Arial">...</FONT></TD>
+				</TR>
+				<TR>
+					<TD width="79"><FONT face="Arial">3455.0</FONT></TD>
+					<TD><FONT face="Arial">48</FONT></TD>
+					<TD><FONT face="Arial">88</FONT></TD>
+					<TD><FONT face="Arial">96</FONT></TD>
+					<TD><FONT face="Arial">201</FONT></TD>
+					<TD><FONT face="Arial">...</FONT></TD>
+				</TR>
+				<TR>
+					<TD width="79"><FONT face="Arial">3456.0</FONT></TD>
+					<TD><FONT face="Arial">148</FONT></TD>
+					<TD><FONT face="Arial">200</FONT></TD>
+					<TD><FONT face="Arial">156</FONT></TD>
+					<TD><FONT face="Arial">133</FONT></TD>
+					<TD><FONT face="Arial">...</FONT></TD>
+				</TR>
+				<TR>
+					<TD width="79"><FONT face="Arial">3457.0</FONT></TD>
+					<TD><FONT face="Arial">115</FONT></TD>
+					<TD><FONT face="Arial">133</FONT></TD>
+					<TD><FONT face="Arial">110</FONT></TD>
+					<TD><FONT face="Arial">120</FONT></TD>
+					<TD><FONT face="Arial">...</FONT></TD>
+				</TR>
+				<TR>
+					<TD width="79"><FONT face="Arial">3458.0</FONT></TD>
+					<TD><FONT face="Arial">20</FONT></TD>
+					<TD><FONT face="Arial">18</FONT></TD>
+					<TD><FONT face="Arial">50</FONT></TD>
+					<TD><FONT face="Arial">80</FONT></TD>
+					<TD><FONT face="Arial">...</FONT></TD>
+				</TR>
+				<TR>
+					<TD width="79"><FONT face="Arial">...</FONT></TD>
+					<TD><FONT face="Arial">12</FONT></TD>
+					<TD><FONT face="Arial">5</FONT></TD>
+					<TD><FONT face="Arial">22</FONT></TD>
+					<TD><FONT face="Arial">3</FONT></TD>
+					<TD><FONT face="Arial">...</FONT></TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P>Where there the first column consist of the m/z values and the remaining columns 
+			to the right consist of the intensity values of each sample. Note that&nbsp;the 
+			above is only an example, where the spectrum is a mass spectrum. There is no 
+			limit on the number of decimal places for m/z or intensity values. There is 
+			also no requirement for headings on top of each column.</P>
+		<P><STRONG>Note: From version 1.1, SpecAlign supports importing of files with different 
+				x-axis values. Data points that do not match the ones already loaded will be 
+				estimated by linear interpolation.</STRONG></P>
+		<P><STRONG>Folder</STRONG>:</P>
+		<P>
+			Gives the option to load all files from within a folder that contains multiple 
+			files each consisting of spectra lists in CSV or TXT (tab delimited) format.</P>
+		<P><STRONG>Average spectrum:</STRONG></P>
+		<P>An option to load the average spectrum from a CSV or TXT (tab delimited) file. 
+			See <A href="hid_spectrum_generateaveragespectrum.htm#avgspec">Generate average 
+				spectrum</A> for a description of the average spectrum.</P>
+	</BODY>
+</HTML>

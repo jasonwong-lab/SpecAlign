@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="alignment">
+		<param name="Name" value="Align spectra command (Processing menu)">
+		<param name="Local" value="hid_processing_alignpeaks.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="manipulate spectrum">
+		<param name="Name" value="Spectrum dialog">
+		<param name="Local" value="hid_spectrum_dialog.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="exporting">
+		<param name="Name" value="Export command (File menu)">
+		<param name="Local" value="hid_file_export.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="importing">
+		<param name="Name" value="Import command (File menu)">
+		<param name="Local" value="hid_file_import.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pick peaks">
+		<param name="Name" value="Pick peaks command (Spectrum menu)">
+		<param name="Local" value="hid_spectrum_pickpeaks.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="reference">
+		<param name="Name" value="Average spectrum">
+		<param name="Local" value="hid_edit_averagespec.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

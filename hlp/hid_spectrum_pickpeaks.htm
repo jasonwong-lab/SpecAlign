@@ -1,0 +1,43 @@
+<HTML>
+	<HEAD>
+		<TITLE>Pick peaks command (Spectrum menu)</TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><A name="hid_view_toolbar"></A><B>Pick peaks&nbsp;command (Spectrum menu)</B></P>
+		<P>Use this command to use bring up a dialog (see below) which gives options to 
+			pick peaks and then execute a <A href="#peakpickalg">peak picking algorithm</A> 
+			to automatically pick peaks within the loaded spectra.</P>
+		<P><IMG alt="Pick peaks dialog" src="Images\pickpeaks.JPG" align="left"></P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P><STRONG>Baseline&nbsp;cutoff: </STRONG>The&nbsp;fraction of baseline&nbsp;under 
+			the baseline intensity at which the algorithm should ignore picking peaks. 
+			(i.e. 0.5 is 50% over the baseline intensity at any given point).</P>
+		<P><STRONG>Window</STRONG>: The window size for defining a peak. Smaller windows 
+			means more sensitive peak picking.</P>
+		<P><STRONG>Iterations:</STRONG> Number of iterations to pick peaks. The more 
+			iterations the less sensitive the peak picking will be.</P>
+		<P>&nbsp;</P>
+		<P><STRONG><A name="peakpickalg">Peak picking algorithm</A></STRONG></P>
+		<OL>
+			<LI>
+				Within each <STRONG>window</STRONG>
+			across a spectrum, determine if there is a change in gradent from positive to 
+			negative to determine if the window contains a potential peak.
+			<LI>
+				If the peaks is above the&nbsp; <STRONG>baseline&nbsp;cutoff</STRONG>
+			and also above the average intensity across the local region of the spectrum 
+			(local region is defined as 1/100th of the size of the entire spectrum), then 
+			the peak is accepted.
+			<LI>
+				If there is more than one <STRONG>iteration</STRONG>
+			specified, then for each additional iteration, remove any peak where its 
+			intensity is below that of either peak adjacent to it.
+			<LI>
+				Repeat steps 1-3 for all spectra loaded.</LI></OL>
+	</BODY>
+</HTML>

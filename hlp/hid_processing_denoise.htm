@@ -1,0 +1,48 @@
+<HTML>
+	<HEAD>
+		<TITLE>Smooth command (Processing menu)</TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><A name="hid_view_toolbar"></A><B>Denoise command (Processing menu)</B></P>
+		<P>
+			This command&nbsp;smooths all spectra by using a Symmlet8 wavelet transform 
+			and&nbsp;then applying&nbsp;soft thresholding to&nbsp;the wavelet&nbsp;(see 
+			below).</P>
+		<P><IMG alt="Denoise example" src="Images\Denoise_ex.gif" align="left" id="IMG1" height="326" width="718"></P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P><FONT face="ËÎÌו"></FONT>&nbsp;</P>
+		<P><FONT face="ËÎÌו"></FONT>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>
+			On selection of the function, a dialog is activated to allow the specification 
+			of the&nbsp;threshold value&nbsp;(see below).</P>
+		<P><IMG alt="Smoothing dialog" src="Images\denoiseDlg.jpg" align="left"></P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>
+			Typically,&nbsp;a threshold of 0.5 is used defined as the median absolute value 
+			of the wavelet coefficients. The actual threshold (T) is calculated as:</P>
+		<P>T&nbsp;= sqrt(2*log(n))*t/sqrt(n)</P>
+		<P>where <EM>n</EM> is the length of the input and <EM>t</EM> is the input 
+			threshold from the dialog (see reference).</P>
+		<P>Denoising&nbsp;is useful for removing noise and enhances the ability of 
+			SpecAlign to <A href="hid_spectrum_pickpeaks.htm">pick peaks</A>.</P>
+		<P>
+			Reference:</P>
+		<UL dir="ltr">
+			<LI>
+				<DIV style="MARGIN-RIGHT: 0px">
+					Donoho D. L.&nbsp;(1994) De<EM>-</EM>Noising By Soft-Thresholding,<STRONG> </STRONG>
+					<EM>IEEE Transactions on Information Theory</EM>, 41(3), 613-27.</DIV>
+			</LI>
+		</UL>
+	</BODY>
+</HTML>

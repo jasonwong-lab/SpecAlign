@@ -1,0 +1,110 @@
+<HTML>
+	<HEAD>
+		<TITLE>Align spectra command (Processing menu)</TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><A name="hid_view_toolbar"></A><B>Align&nbsp;spectra&nbsp;command (Processing menu)</B></P>
+		<P>This command&nbsp;aligns all spectra to an average spectrum based on aligning 
+			peaks of each spectrum to the average spectrum.</P>
+		<P><IMG alt="Align" src="Images\alignment.jpg" align="left" border="1"></P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>There are four different methods of alignment:</P>
+		<P><A name="peak">(1) <STRONG>Peak matching method</A></STRONG></P>
+		<P>On selection of the function, a dialog is activated to allow the specification 
+			of the&nbsp;alignment range&nbsp;and the&nbsp;maximum shift&nbsp;(see below).</P>
+		<P><IMG alt="Alignment dialog" src="Images\alignDlg.jpg" align="left"></P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>The max shift parameter specifies the maximum amount that a peak may shift by to 
+			match a reference peak.</P>
+		<P>
+			This method aligns a spectrum with its reference based on matching selected 
+			peaks.</P>
+		<P>Alignment algorithm<SUP>1</SUP>:</P>
+		<OL>
+			<LI>
+				If not present, generate an average spectrum,&nbsp;<STRONG><EM>A</EM></STRONG>,&nbsp;from 
+			all spectra to be aligned.
+			<LI>
+			If peaks have not been picked, automatically pick peaks based on the default or 
+			previous peak picking settings.
+			<LI>
+				For each spectrum to be aligned, <STRONG><EM>S</EM><EM><SUB>i</SUB></EM></STRONG>
+				, iterate through the peak list of <STRONG><EM>A</EM></STRONG> and attempt to 
+				find a peak within the margin of error in <STRONG><EM>S</EM><EM><SUB>i</SUB></EM></STRONG>.
+			<LI>
+				The peak in <STRONG><EM>S</EM><EM><SUB>i </SUB></EM></STRONG>that is closest to 
+				the peak in <STRONG><EM>A </EM></STRONG>
+			is selected for alignment.
+			<LI>
+				To perform the alignment for the peak, the&nbsp;minima adjacent to the selected 
+				peaks in <STRONG><EM>S</EM><EM><SUB>i</SUB></EM></STRONG>
+			&nbsp;are found and adjusted accordingly by insertion or deletion of data 
+			points. Where points are inserted, the&nbsp;y-value of the point is estimated 
+			by a least-squares fit about the neighboring points.&nbsp;
+			<LI>
+				This is repeated for all peaks in <STRONG><EM>A</EM></STRONG>&nbsp;for all 
+				spectra <STRONG><EM>S</EM></STRONG>.</LI></OL>
+		<P><A name="pafft">(2) <STRONG>PAFFT correlation method (Peak alignment by Fast Fourier 
+				Transform)</A></STRONG></P>
+		<P>On selection of the function, a dialog is activated to allow the specification 
+			of the&nbsp;alignment range,&nbsp;minimum segment size, maximum shift 
+			and&nbsp;scaling of spectra for alignment&nbsp;(see below).</P>
+		<P><IMG alt="PAFFT alignment" src="Images\PAFFTalign.jpg"></P>
+		<P>The minimum segment is automatically estimated as 1/20 of the length of the 
+			spectra. The max shift parameter specifies the maximum amount that a peak may 
+			shift by to match a reference peak. The scale parameter is optional, by using a 
+			sqrt or cube root scale, the importance of small peaks for calculation of 
+			correlation is enhanced.</P>
+		<P>Unlike the peak matching method, this alignment is not dependent on picking 
+			peaks. The PAFFT algorithm works by dividing a spectrum into segments before 
+			the evaluation of best shift using FFT cross-correlation<SUP>2</SUP>.</P>
+		<P><A name="rafft">(3) <STRONG>RAFFT correlation method (Recursive alignment by Fast 
+				Fourier Transform)</A></STRONG></P>
+		<P>On selection of the function, a dialog is activated to allow the specification 
+			of the&nbsp;alignment range,&nbsp;scaling, maximum shift and&nbsp;"look ahead" 
+			(see below).</P>
+		<P><IMG alt="RAFFT alignment" src="Images\RAFFTalign.jpg"></P>
+		<P>The max shift parameter specifies the maximum amount that a peak may shift by to 
+			match a reference peak. The scale parameter is optional, by using a sqrt or 
+			cube root scale, the importance of small peaks for calculation of correlation 
+			is enhanced. The look-ahead parameter is also optional and specifies the number 
+			of iterations the recursive alignment should look-ahead for misaligned peaks.</P>
+		<P>The algorithm is similar to PAFFT, but the alignment is not dependent on 
+			selecting the minimum size to divide a spectrum, but rather the minimum size is 
+			automatically found by recursive alignment<SUP>2</SUP>.</P>
+		<P><A name="combined">(4)&nbsp;<STRONG>FFT/peak matching&nbsp;combined&nbsp;method</A></STRONG></P>
+		<P>On selection of the function, a dialog is activated to allow the specification 
+			of the&nbsp;alignment range,&nbsp;scaling, maximum shift and&nbsp;"look ahead" 
+			(same as RAFFT).</P>
+		<P>The method first applies RAFFT to align the spectrum by correlation. It then 
+			applies the peak matching method using high tolerance peak picking parameter 
+			(minimum peak intensity - 0, tolerance - 5 pts, iterations - 1).</P>
+		<P>
+			The advantage of this combined method is that RAFFT is able to reduce the 
+			possibility of the peak matching algorithm matching an incorrect peak in the 
+			reference spectrum<SUP>2</SUP>.</P>
+		<P>&nbsp;</P>
+		<P><SUP>1</SUP>Wong, J.W.H, Cagney, G. and Cartwright, H.M. (2005) SpecAlign - 
+			processing and alignment of mass spectra datasets. <EM>Bioinformatics, </EM><STRONG>
+				21</STRONG>: 2088-2090</P>
+		<P><SUP>2</SUP>Wong, J.W.H. and Cartwright, H.M. (2005) - An application of Fast 
+			Fourier Transform cross-correlation&nbsp;for the alignment of large 
+			chromatographic and spectral datasets. <EM>Analytical Chemistry</EM>, <STRONG>77</STRONG>: 
+			5655-5661</P>
+	</BODY>
+</HTML>
