@@ -1,0 +1,38 @@
+SpecAlign v1.3 (10-Mar-08)
+by Jason W. H. Wong, Cartwright Lab, PTCL, University of Oxford. 2005-08(c)
+
+This command line version of specAlign uses the same source code as 
+the Windows version. The functions of specAlign are implemented in 4 
+separate excutables.
+
+(1) specAlign-prepro implements much of the preprocessing methods that
+    is avaliable in the Windows version, excluding the alignment
+    methods.
+    The order in which each preprocessing method is optimized in the
+    sense that if a number of methods are specified in a single run,
+    there will be minimal interferance between each preprocessing
+    method. The order is as follows:
+        Crop
+        Normalize by TIC
+        Scale to positive
+        Scale spectra by a factor
+        Bin spectra
+        Subtract baseline
+        Smoothing
+        Covert to relative intensity
+    If the default order of operations is undesirable, it can easily be
+    overcome by running specAlign-prepro a number of times separately
+    with different preprocessing options.
+
+(2) specAlign-peakalign implements the alignment by peaks method.
+(3) specAlign-PAFFT implements alignment by PAFFT.
+(4) specAling-RAFFT implements alignment by RAFFT.
+
+To compilation/installation instructions see the INSTALL file.
+
+The use of specAlign is subject to agreement with the terms and 
+conditions specified in the LICENSE file distributed with this package. 
+Please refer to this file BEFORE using specAlign.
+
+Please send and comments/bugs to Jason Wong <jason.wong@chem.ox.ac.uk>
+

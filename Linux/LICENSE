@@ -1,0 +1,40 @@
+SpecAlign v1.3 (10-Mar-08)
+by Jason W. H. Wong, Cartwright Lab, PTCL, University of Oxford. 2005-08(c)
+
+License
+
+The stand-alone specAlign application and its source code is free to 
+academic, government and non-profit users for non-commercial use. Use of 
+the specAlign application and source code in part or in whole for 
+commercial use by non-profit and for-profit entities requires a license 
+agreement. Parties interested in commercial should contact 
+jason.wong@chem.ox.ac.uk for permission to use the specAlign application 
+or its source code.
+
+The use of specAlign in any research must cite as appropriate:
+Wong, J.W.H., Cagney, G. and Cartwright, H.M. (2005) SpecAlign - processing 
+	and alignment of mass spectra datasets. Bioinformatics. 
+	21(9):2088-2090.
+Wong, J.W.H., Durante, C and Cartwright, H.M. (2005) Application of Fast 
+	Fourier Transform Cross-Correlation for the Alignment of Large 
+	Chromatographic and Spectral Datasets. Anal. Chem. 
+	77(17):5655-5661.		
+
+Disclaimer
+
+specAlign and all associated documents ARE PROVIDED "AS IS" WITHOUT ANY 
+WARRANTY OF ANY KIND, EITHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING, 
+BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+A PARTICULAR PURPOSE AND FREEDOM FROM INFRINGEMENT, OR THAT specAlign and 
+all associated documents WILL BE ERROR FREE. The authur MAKES NO 
+REPRESENTATIONS THAT THE USE OF specAlign or any associated documents 
+WILL NOT INFRINGE ANY PATENT OR PROPRIETARY RIGHTS OF THIRD PARTIES. In no 
+event will the authors be liable for any damages, including but not 
+limited to direct, indirect, special or consequential damages, arising out 
+of, resulting from, or in any way connected with the use of specAlign or 
+any associated documents.
+
+By using the software, you acknowledge that you have read and agree 
+to be bound by this license.
+
+

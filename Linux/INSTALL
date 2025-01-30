@@ -1,0 +1,12 @@
+SpecAlign v1.3 (10-Mar-08)
+by Jason W. H. Wong, Cartwright Lab, PTCL, University of Oxford. 2005-08(c)
+
+To install type:
+
+	make
+
+After compilation, executables will be located in the ./bin folder.
+
+To clean build:
+
+	make clean
