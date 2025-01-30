@@ -1,3 +1,26 @@
+# SpecAlign version 2.4
+
+SpecAlign was initially designed for pre-processing of mass spectrometry and chromatographic data with a focus
+on alignment of signals across samples that may be shifted due to minor changes in spectrometric or 
+chromatographic conditions over time. 
+
+The software and algorithms underlying specalign are described in:
+https://pubmed.ncbi.nlm.nih.gov/15691857/
+https://pubmed.ncbi.nlm.nih.gov/16131078/
+
+SpecAlign has continued to find applications in a range of modern datasets. To ensure its continual availability
+the source code for the orginal Windows version (compiled using VS 7.0) is are available here.
+
+The executable can also be download under Releases.
+
+The code for the command line linux version is available under Linux.
+
+The Matlab code implementing RAFFT is available under Matlab.
+
+Please note that this software has not been maintained for some years.
+
+
+
 ================================================================================
     MICROSOFT FOUNDATION CLASS LIBRARY : SpecAlign Project Overview
 ===============================================================================
